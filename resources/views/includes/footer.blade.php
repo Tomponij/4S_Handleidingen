@@ -1,6 +1,28 @@
 
 <footer>
-  <div class="container"><p>© {{ __('misc.copyright') }}</p></div>
+  <div class="container">
+    <p>© {{ __('misc.copyright') }}</p>
+    <p>social</p>
+    <ul>
+      <li>Facebook</li>
+      <li>Instagram</li>
+      <li>Twitter</li>
+      <li>Tiktok</li>
+    </ul>
+
+    <p>Contact</p>
+    <ul>
+      <li>1234| Alkmaar</li>
+      <li>Tel | 0612345678</li>
+      <li>Adres | Straatstraat 18</li>
+    </ul>
+  <p>over ons</p>
+  <ul>
+      <li>Wij staan voor eerlijkheid en vertrouwen, geloven dat we daarmee een prachtig product kunnen maken</li>
+  </ul>
+
+  
+  </div>
 </footer>
 
 
