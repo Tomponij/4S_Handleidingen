@@ -1,8 +1,8 @@
 @extends('layouts.default')
 
 @section('head')
-<meta name="robots" content="index, nofollow">
-@stop
+<meta name="robots" content="index, nofollow">@stop
+
 
 @section('breadcrumb')
 	<li><a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/" alt="Manuals for '{{$brand->name}}'" title="Manuals for '{{$brand->name}}'">{{ $brand->name }}</a></li>
@@ -17,13 +17,21 @@
 
 <div class="manualButton">
 	@foreach ($manuals as $manual)
-	
+	<?php
+		$manual->counter +=1;
+		$manual->save();
+	?>
 		@if ($manual->locally_available)
 		<button type="button"><a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/{{ $type->id }}/{{ $type->name_url_encoded }}/{{ $manual->id }}/" alt="{{ __('misc.view_manual_alt') }}" title="{{ __('misc.view_manual_alt') }}">{{ __('misc.view_manual') }}</a></button>
 			({{$manual->filesize_human_readable}})
 		@else
 		<button type="button"><a href="{{ $manual->url }}" target="new" alt="{{ __('misc.download_manual_alt') }}" title="{{ __('misc.download_manual_alt') }}">{{ __('misc.download_manual') }}</a></button>
 		@endif
+
+	@php
+		$manual->count += 1;
+		$manual->save();
+	@endphp
 		
 		<br />
 	@endforeach

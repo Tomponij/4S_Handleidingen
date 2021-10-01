@@ -1,10 +1,9 @@
 
 <footer>
   <div class="container">
-    <p>© {{ __('misc.copyright') }}</p>
     <div class="kopjesFooter">
       <div class="socialsFooter">
-      <p>social</p>
+        <p>social</p>
         <ul>
           <li>Facebook</li>
           <li>Instagram</li>
@@ -27,6 +26,7 @@
       </ul>
       </div>
     </div>
+    <p>© {{ __('misc.copyright') }}</p>
   </div>
 
   
