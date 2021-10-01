@@ -27,11 +27,6 @@
 		@else
 		<button type="button"><a href="{{ $manual->url }}" target="new" alt="{{ __('misc.download_manual_alt') }}" title="{{ __('misc.download_manual_alt') }}">{{ __('misc.download_manual') }}</a></button>
 		@endif
-
-	@php
-		$manual->count += 1;
-		$manual->save();
-	@endphp
 		
 		<br />
 	@endforeach
