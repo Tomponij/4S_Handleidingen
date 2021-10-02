@@ -10082,3 +10082,8 @@ footer{
 .homepageList{
   background-color: #e9ecef;
 }
+
+.dataHandleidingen{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
